@@ -16,7 +16,7 @@ export class TrackService{
         @InjectModel(Comment.name) private commentModel: Model<Comment>,
     ) {}
 
-    async create(dto: CreateTrackDto): Promise<Track>{
+    async create(dto: CreateTrackDto, picture, audio): Promise<Track>{
         const track = await this.trackModel.create({ ...dto, listeners: 0})
         return track
     }

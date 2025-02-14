@@ -1,9 +1,8 @@
 import * as mongoose from 'mongoose'
 import { Document } from 'mongoose'
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose'
-
-
 import { Comment } from './comment.schema'
+
 
 export type TrackDocument = Track & Document
 
@@ -13,10 +12,10 @@ export class Track {
   name: string
 
   @Prop()
-  artist: number
+  artist: string
 
   @Prop()
-  track: string
+  text: string
 
   @Prop()
   listeners: number

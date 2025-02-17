@@ -36,7 +36,7 @@ export class TrackService{
     }
 
     async delete(id: ObjectId): Promise<Track | null> {
-        const track = await this.trackModel.findByIdAndDelete(id);
+        const track = await this.trackModel.findByIdAndDelete(id)
         return track?.id
     }
 
@@ -54,7 +54,7 @@ export class TrackService{
         const track = await this.trackModel.findById(id);
         if(track){
             track.listeners += 1
-            track?.save()
+            track.save()
         }
         
     }
@@ -63,6 +63,6 @@ export class TrackService{
         const tracks = await this.trackModel.find({
             name: {$regex: new RegExp(query, 'i')}
         })
-        return tracks;
+        return tracks
     }
 }

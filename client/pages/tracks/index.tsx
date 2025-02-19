@@ -1,10 +1,16 @@
 import React from "react"
+import { Container } from "@mui/material"
+
+import MainLayout from "../../layouts/MainLayout"
+
 
 const Index = () => {
     return (
-        <div>
-            tracks
-        </div>
+        <MainLayout>
+            <Container style={{ margin: '100px'}}>
+                tracks
+            </Container>
+        </MainLayout>
     )
 }
 

@@ -24,7 +24,7 @@ export default function Navbar() {
     };
 
     return (
-        <div >
+        <><div>
             <CssBaseline />
             <AppBar
                 position="fixed"
@@ -47,6 +47,14 @@ export default function Navbar() {
                 variant="persistent"
                 anchor="left"
                 open={open}
+                sx={{
+                    '& .MuiDrawer-paper': {
+                        width: 300,
+                        backgroundColor: '#f5f5f5',
+                        color: '#333',
+                        boxShadow: '2px 0 5px rgba(0,0,0,0.2)',
+                    },
+                }}
             >
                 <div>
                     <IconButton onClick={handleDrawerClose}>
@@ -54,8 +62,8 @@ export default function Navbar() {
                     </IconButton>
                 </div>
                 <List>
-                    {menuItems.map(({text, href}, index) => (
-                        <li key={href} onClick={() => router.push(href)}>
+                    {menuItems.map(({ text, href }, index) => (
+                        <li key={href} onClick={() => router.push(href)} className='menu-item'>
                             <ListItemIcon>
                                 {index % 2 === 0 ? <InboxOutlined /> : <MailOutline />}
                             </ListItemIcon>
@@ -65,5 +73,25 @@ export default function Navbar() {
                 </List>
             </Drawer>
         </div>
+        
+        <style jsx>
+            {`
+            .menu-item {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                padding: 10px;
+                border-radius: 5px;
+                margin-bottom: 5px;
+                transition: background-color 0.3s ease;
+                &:hover {
+                    background-color: #e0e0e0;
+                }
+            }
+            `}
+            </style>
+        </>
     )
 }

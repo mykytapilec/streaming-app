@@ -63,7 +63,11 @@ export default function Navbar() {
                 </div>
                 <List>
                     {menuItems.map(({ text, href }, index) => (
-                        <li key={href} onClick={() => router.push(href)} className='menu-item'>
+                        <li key={href} onClick={() => {
+                            console.log('clicked', href)
+                            router.push(href)
+
+                        }} className='menu-item'>
                             <ListItemIcon>
                                 {index % 2 === 0 ? <InboxOutlined /> : <MailOutline />}
                             </ListItemIcon>

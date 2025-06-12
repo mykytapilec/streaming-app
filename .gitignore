@@ -1,0 +1,64 @@
+# Node.js
+node_modules/
+.env
+.env.*       # environment variants like .env.local, .env.production
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Next.js
+.next/
+out/          # if using `next export`
+.vercel/      # Vercel deployment metadata
+
+# Build artifacts
+dist/
+build/
+*.log
+
+# OS/IDE-related
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+
+# Test coverage
+coverage/
+*.lcov
+
+# Logs
+logs/
+*.log
+log.txt
+
+# Misc
+*.local
+*.cache
+.cache/
+turbo/
+.next-turbo/
+tmp/
+temp/
+*.tgz
+
+# Optional: skip uploads or user files
+public/uploads/
+uploads/
+
+# Optional: ignore Firebase or Supabase
+.firebase/
+.supabase/
+
+# Optional: TypeScript
+*.tsbuildinfo
+
+# Optional: ESLint / Prettier caches
+.eslintcache
+.prettiercache
+
+# Optional: ignore Playwright/Cypress/Storybook
+.playwright/
+.cypress/
+.storybook/

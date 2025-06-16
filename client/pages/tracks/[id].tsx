@@ -1,4 +1,4 @@
-import { Button, Grid2 } from "@mui/material";
+import { Button, Grid2, TextField } from "@mui/material";
 import MainLayout from "../../layouts/MainLayout";
 import { ITrack } from "../../types/track";
 import { useRouter } from "next/router";
@@ -27,6 +27,22 @@ const TrackPage = () => {
                 <h1>Listens {track.listens}</h1>
             </div>
            </Grid2>
+           <h1>Lyrics</h1>
+           <p>{track.text}</p>
+           <h1>Comments</h1>
+           <Grid2 container>
+                <TextField label="Your name" fullWidth />
+                <TextField label="Comment" fullWidth multiline rows={4} />
+                <Button>Send</Button>
+           </Grid2>
+           <div>   
+            {track.comments.map(comment => (
+                <div key={comment._id}>
+                    <div>Author {comment.username}</div>
+                    <div>Comment {comment.text}</div>
+                </div>
+            ))}
+           </div>
         </MainLayout>
     )
 }

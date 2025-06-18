@@ -1,7 +1,7 @@
 import FileUpload from "@mui/icons-material/FileUpload";
 import StepWrapper from "../../components/StepWrapper";
 import MainLayout from "../../layouts/MainLayout";
-import { Button, Grid2 } from "@mui/material";
+import { Button, Grid2, TextField } from "@mui/material";
 import { useState } from "react";
 
 const Create = () => {
@@ -17,7 +17,22 @@ const Create = () => {
     return (
         <MainLayout>
             {activeStep === 0 && <StepWrapper activeStep={activeStep}>
-                <h1>Step 1</h1>
+                <Grid2 container direction="column" style={{ padding: 20 }}>
+                    <TextField
+                        label="name of track"
+                        style={{ marginTop: 10 }}
+                    />
+                    <TextField
+                        label="name of artist"
+                        style={{ marginTop: 10 }}
+                    />
+                     <TextField
+                        label="lyrics"
+                        multiline
+                        rows={3}
+                        style={{ marginTop: 10 }}
+                    />
+                </Grid2>
             </StepWrapper>}
             {activeStep === 1 && <StepWrapper activeStep={activeStep}>
                 <h1>Step 2</h1>

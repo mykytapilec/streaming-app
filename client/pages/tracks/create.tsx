@@ -1,4 +1,4 @@
-import FileUpload from "@mui/icons-material/FileUpload";
+import FileUpload from "../../components/FileUpload";
 import StepWrapper from "../../components/StepWrapper";
 import MainLayout from "../../layouts/MainLayout";
 import { Button, Grid2, TextField } from "@mui/material";
@@ -6,6 +6,8 @@ import { useState } from "react";
 
 const Create = () => {
     const [activeStep, setActiveStep] = useState(0)
+    const [picture, setPicture] = useState(null)
+    const [audio, setAudio] = useState(null)
     
     const back = () => {
         setActiveStep(activeStep - 1)
@@ -35,10 +37,14 @@ const Create = () => {
                 </Grid2>
             </StepWrapper>}
             {activeStep === 1 && <StepWrapper activeStep={activeStep}>
-                <h1>Step 2</h1>
+                <FileUpload setFile={setPicture} accept="image/*">
+                    <Button>Load album image</Button>
+                </FileUpload>
             </StepWrapper>}
             {activeStep === 2 && <StepWrapper activeStep={activeStep}>
-                <h1>Step 3</h1>
+                <FileUpload setFile={setAudio} accept="audio/*">
+                    <Button>Load audio track</Button>
+                </FileUpload>
             </StepWrapper>}
             <Grid2 container justifyContent="space-between">
                 <Button disabled={activeStep === 0} onClick={back}>Back</Button>

@@ -24,6 +24,5 @@ export const playerReducer = (state = initialState, action: PlayerAction): Playe
             return {...state, active: action.payload, duration: 0, currentTime: 0}
         default:
             return state
-
     }
 }

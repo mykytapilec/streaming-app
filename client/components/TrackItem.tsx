@@ -1,6 +1,6 @@
 import { ITrack } from "../types/track";
 import styles from '../styles/TrackItem.module.scss';
-import { Box, Card, Grid2, IconButton } from "@mui/material";
+import { Card, Grid2, IconButton } from "@mui/material";
 import { Delete, Pause } from "@mui/icons-material";
 import { PlayArrow } from "@mui/icons-material";
 import { useRouter } from "next/router";

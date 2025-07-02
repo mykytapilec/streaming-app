@@ -6,8 +6,8 @@ import { useState } from "react";
 
 const Create = () => {
     const [activeStep, setActiveStep] = useState(0)
-    const [picture, setPicture] = useState(null)
-    const [audio, setAudio] = useState(null)
+    const [picture, setPicture] = useState<File | null>(null)
+    const [audio, setAudio] = useState<File | null>(null)
     
     const back = () => {
         setActiveStep(activeStep - 1)

@@ -12,7 +12,7 @@ const MainLayout: React.FC<MainLayoutProps> = ({ children }) => {
     return (
         <>
             <Navbar />
-            <Container style={{margin: '90px 0'}}>
+            <Container style={{margin: '90px auto'}}>
                 { children }
             </Container>
             <Player />

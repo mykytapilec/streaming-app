@@ -9,13 +9,23 @@ const rootReducer = combineReducers({
     track: trackReducer
 })
 
-export const reducer = (state, action) => {
+interface HydrateAction {
+    type: typeof HYDRATE;
+    payload: RootState;
+}
+
+type PlayerAction = Parameters<typeof playerReducer>[1];
+type TrackAction = Parameters<typeof trackReducer>[1];
+
+type AppAction = HydrateAction | PlayerAction | TrackAction;
+
+export const reducer = (state: RootState | undefined, action: AppAction): RootState => {
     if (action.type === HYDRATE) {
-        const nextState = {
+        const nextState: RootState & { count?: number } = {
             ...state, // use previous state
             ...action.payload, // apply delta from hydration
         }
-        if (state.count) nextState.count = state.count // preserve count value on client side navigation
+        // No 'count' property in RootState, so nothing to preserve here
         return nextState
     } else {
         return rootReducer(state, action)

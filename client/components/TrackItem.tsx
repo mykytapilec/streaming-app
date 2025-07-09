@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { ITrack } from "../types/track";
 import styles from '../styles/TrackItem.module.scss';
 import { Card, Grid2, IconButton } from "@mui/material";
@@ -17,7 +18,13 @@ const TrackItem: React.FC<TrackItemProps> = ({track, active = false}) => {
             <IconButton onClick={e => e.stopPropagation()}>
                 {!active ? <PlayArrow /> : <Pause />}
             </IconButton>
-            <img width={70} height={70} style={{ backgroundColor: '#000' }} src={track.picture} alt={track.name} />
+            <Image
+                width={70}
+                height={70}
+                style={{ backgroundColor: '#000' }}
+                src={track.picture}
+                alt={track.name}
+            />
             <Grid2 container direction="column" style={{ width: 200, margin: '0 20px' }}>
                 <div>{track.name}</div>
                 <div style={{ fontSize: 12, color: 'gray' }}>{track.artist}</div>

@@ -17,7 +17,7 @@ const Index = () => {
             artist: 'Artist 1',
             text: 'Text 1',
             listens: 100,
-            picture: 'picture 1',
+            picture: '/picture 1',
             audio: 'audio 1',
             comments: []
         },
@@ -27,7 +27,7 @@ const Index = () => {
             artist: 'Artist 2',
             text: 'Text 2',
             listens: 200,
-            picture: 'picture 2',
+            picture: '/picture 2',
             audio: 'audio 2',
             comments: []
         },
@@ -37,7 +37,7 @@ const Index = () => {
             artist: 'Artist 3',
             text: 'Text 3',
             listens: 300,
-            picture: 'picture 3',
+            picture: '/picture 3',
             audio: 'audio 3',
             comments: []
         }   

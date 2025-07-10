@@ -11,7 +11,7 @@ const Player = () => {
         artist: 'Artist 1',
         text: 'Text 1',
         listens: 100,
-        picture: 'picture 1',
+        picture: '/picture 1',
         audio: 'audio 1',
         comments: []
     }

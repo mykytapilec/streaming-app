@@ -1,5 +1,6 @@
 import { Card, Container, Grid2, Step, StepLabel, Stepper } from "@mui/material";
 import { FC } from "react";
+import styles from '../styles/TrackItem.module.scss';
 
 interface StepWrapperProps {
     activeStep: number;
@@ -18,8 +19,8 @@ const StepWrapper: FC<StepWrapperProps> = ({ activeStep, children }) => {
                     </Step>
                 ))}
             </Stepper>
-            <Grid2 container justifyContent="center" style={{ margin: '70px 0', height: '270px' }}>
-                <Card style={{ width: 600 }}>
+            <Grid2 container justifyContent="center" className={styles.stepWrapper}>
+                <Card className={styles.card}>
                     {children}
                 </Card>
             </Grid2>

@@ -6,6 +6,7 @@ import MainLayout from "../../layouts/MainLayout";
 import { Button, Grid2, TextField } from "@mui/material";
 import { useState } from "react";
 import axios from "axios";
+import styles from '../../styles/TrackItem.module.scss';
 
 const Create = () => {
     const [activeStep, setActiveStep] = useState(0)
@@ -43,7 +44,7 @@ const Create = () => {
     return (
         <MainLayout>
             {activeStep === 0 && <StepWrapper activeStep={activeStep}>
-                <Grid2 container direction="column" style={{ padding: 20 }}>
+                <Grid2 container direction="column" className={styles.container}>
                     <TextField
                         label="name of track"
                         style={{ marginTop: 10 }}

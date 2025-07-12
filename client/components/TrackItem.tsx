@@ -25,7 +25,7 @@ const TrackItem: React.FC<TrackItemProps> = ({track, active = false}) => {
                 src={track.picture}
                 alt={track.name}
             />
-            <Grid2 container direction="column" style={{ width: 200, margin: '0 20px' }}>
+            <Grid2 container direction="column" className={styles.trackInfo}>
                 <div>{track.name}</div>
                 <div style={{ fontSize: 12, color: 'gray' }}>{track.artist}</div>
             </Grid2>

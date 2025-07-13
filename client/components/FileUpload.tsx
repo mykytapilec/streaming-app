@@ -1,4 +1,5 @@
 import { FC, ReactNode, useRef } from "react";
+import styles from '../styles/common.module.scss';
 
 interface FileUploadProops {
     setFile: (file: File) => void;
@@ -27,7 +28,7 @@ const FileUpload: FC<FileUploadProops> = ({ setFile, accept, children }) => {
 
     return (
         <div onClick={onClick}>
-            <input type="file" accept={accept} ref={ref} style={{ display: "none"}} onChange={onChange}/>
+            <input type="file" accept={accept} ref={ref} className={styles.none} onChange={onChange}/>
             { children }
         </div>
     )

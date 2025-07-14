@@ -24,12 +24,12 @@ const Player = () => {
                     active ? <PlayArrow /> : <Pause />
                 }
             </IconButton>
-            <Grid2 container direction="column" style={{ width: 200, margin: '0 20px' }}>
+            <Grid2 container direction="column" className={styles.container}>
                 <div>{track.name}</div>
-                <div style={{ fontSize: 12, color: 'gray' }}>{track.artist}</div>
+                <div className={styles.artist}>{track.artist}</div>
             </Grid2>
             <TrackProgress left={0} right={100} onChange={() => {}} />
-            <VolumeUp style={{ marginLeft: 'auto'}} />
+            <VolumeUp className={styles.volume} />
             <TrackProgress left={0} right={100} onChange={() => {}} />
         </div>
     )

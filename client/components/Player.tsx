@@ -25,7 +25,7 @@ const Player = () => {
                 }
             </IconButton>
             <Grid2 container direction="column" className={styles.container}>
-                <div>{track.name}</div>
+                <div className={styles.track}>{track.name}</div>
                 <div className={styles.artist}>{track.artist}</div>
             </Grid2>
             <TrackProgress left={0} right={100} onChange={() => {}} />

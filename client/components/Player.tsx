@@ -4,6 +4,8 @@ import playerStyles from '../styles/Player.module.scss'
 import commonStyles from '../styles/common.module.scss'
 import { ITrack } from "../types/track";
 import TrackProgress from "./TrackProgress";
+import { useTypedSelector } from "../hooks/useTypedSelector";
+import { useActions } from "../hooks/useActions";
 
 const Player = () => {
     const track: ITrack = {
@@ -16,13 +18,22 @@ const Player = () => {
         audio: 'audio 1',
         comments: []
     }
-    const active = false;
+    const { pause, volume, active, duration, currentTime } = useTypedSelector(state => state.player);
+    const {playTrack, pauseTrack} = useActions();
+    
+    const play = () => {
+        if (pause) {
+            playTrack()
+        } else {
+            pauseTrack()
+        }
+    }
 
     return (
         <div className={playerStyles.player}>
-            <IconButton onClick={e => e.stopPropagation()}>
+            <IconButton onClick={play}>
                 {
-                    active ? <PlayArrow /> : <Pause />
+                    pause ? <PlayArrow /> : <Pause />
                 }
             </IconButton>
             <Grid2 container direction="column" className={playerStyles.container}>

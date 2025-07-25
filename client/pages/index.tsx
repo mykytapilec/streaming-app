@@ -1,28 +1,17 @@
 import React from 'react'
 
 import MainLayout from '../layouts/MainLayout'
+import styles from '../styles/pages.module.scss'
 
 
 const Index = () => {
     return (
         <>
             <MainLayout>
-                <div className='center'>
+                <div className={styles.center}>
                     Main page
                 </div>
             </MainLayout>
-            
-
-            <style jsx>
-                {`
-                    .center {
-                        margin-top: 150px;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        justify-content: center;
-                `}
-            </style>
         </>
     )
 }

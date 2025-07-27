@@ -1,13 +1,12 @@
 import { Card, Container, Grid2, Step, StepLabel, Stepper } from "@mui/material";
 import { FC } from "react";
 import styles from '../styles/TrackItem.module.scss';
+import { steps } from "../constants";
 
 interface StepWrapperProps {
     activeStep: number;
     children: React.ReactNode;
 }
-
-const steps = ['Information about track', 'Upload cover', 'Upload track']
 
 const StepWrapper: FC<StepWrapperProps> = ({ activeStep, children }) => {
     return (

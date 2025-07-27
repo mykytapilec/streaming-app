@@ -3,13 +3,14 @@ import MenuIcon from '@mui/icons-material/Menu'
 import {useRouter} from 'next/router'
 import { AppBar, CssBaseline, Drawer, IconButton, List, ListItemIcon, ListItemText, Toolbar, Typography } from '@mui/material'
 import { ChevronLeftOutlined, InboxOutlined, MailOutline } from '@mui/icons-material'
+import { menuItems } from '../constants'
 
 
-const menuItems = [
-    {text: 'Main', href: '/'},
-    {text: 'Tracks', href: '/tracks'},
-    {text: 'Albums', href: '/albums'},
-]
+// const menuItems = [
+//     {text: 'Main', href: '/'},
+//     {text: 'Tracks', href: '/tracks'},
+//     {text: 'Albums', href: '/albums'},
+// ]
 
 export default function Navbar() {
     const [open, setOpen] = React.useState(false)

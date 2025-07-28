@@ -6,12 +6,6 @@ import { ChevronLeftOutlined, InboxOutlined, MailOutline } from '@mui/icons-mate
 import { menuItems } from '../constants'
 
 
-// const menuItems = [
-//     {text: 'Main', href: '/'},
-//     {text: 'Tracks', href: '/tracks'},
-//     {text: 'Albums', href: '/albums'},
-// ]
-
 export default function Navbar() {
     const [open, setOpen] = React.useState(false)
     const router = useRouter()

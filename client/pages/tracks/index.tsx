@@ -6,6 +6,7 @@ import MainLayout from "../../layouts/MainLayout"
 import { useRouter } from "next/router"
 import { ITrack } from "../../types/track"
 import TrackList from "../../components/TrackList"
+import styles from '../../styles/pages.module.scss'
 
 
 const Index = () => {
@@ -46,7 +47,7 @@ const Index = () => {
     return (
         <MainLayout>
             <Grid2 container spacing={2} justifyContent='center'>
-                <Card style={{ width: 900, marginTop: 100 }}>
+                <Card className={styles.card}>
                     <Box p={2}>
                         <Grid2 container justifyContent="space-between">
                             <h1>List of tracks</h1>

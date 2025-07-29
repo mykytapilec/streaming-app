@@ -1,7 +1,9 @@
- export const menuItems = [
+ const menuItems = [
     {text: 'Main', href: '/'},
     {text: 'Tracks', href: '/tracks'},
     {text: 'Albums', href: '/albums'},
 ]
 
-export const steps = ['Information about track', 'Upload cover', 'Upload track']
+const steps = ['Information about track', 'Upload cover', 'Upload track']
+
+export { menuItems, steps }

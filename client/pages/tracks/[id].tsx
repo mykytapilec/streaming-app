@@ -3,6 +3,7 @@ import { Button, Grid2, TextField } from "@mui/material";
 import MainLayout from "../../layouts/MainLayout";
 import { ITrack } from "../../types/track";
 import { useRouter } from "next/router";
+import styles from '../../styles/pages.module.scss';
 
 const TrackPage = () => {
     const track: ITrack = {
@@ -19,7 +20,7 @@ const TrackPage = () => {
 
     return (
         <MainLayout>
-           <Button variant="outlined" style={{ fontSize: 32 }} onClick={() => router.push('/tracks')}>Back to list</Button>
+           <Button variant="outlined" className={styles.backButton} onClick={() => router.push('/tracks')}>Back to list</Button>
            <Grid2 container style={{ margin: '20px 0' }}>
            <Image src={track.picture} alt={track.name} width={200} height={200} />
             <div style={{ marginLeft: 20 }}>

@@ -1,6 +1,9 @@
 import * as PlayerActionCreators from '../actions-creators/player'
+import * as TrackActionCreators from '../actions-creators/track'
 
-
-export default {
-    ...PlayerActionCreators
-}
+const allActionCreators = {
+    ...PlayerActionCreators,
+    ...TrackActionCreators
+} 
+  
+export default allActionCreators
